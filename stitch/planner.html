@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Weekly Meal Plan - Akletna اكلتنا</title>
+<!-- Material Symbols Outlined -->
+
+<!-- Google Fonts: Plus Jakarta Sans & Inter -->
+
+
+
+<!-- Tailwind CSS -->
+
+
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .material-symbols-fill {
+      font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+    }
+    .shadow-olive-ambient {
+      box-shadow: 0 4px 16px -2px rgba(31, 58, 44, 0.07), 0 2px 6px -1px rgba(31, 58, 44, 0.04);
+    }
+    .shadow-olive-elevated {
+      box-shadow: 0 12px 32px -4px rgba(31, 58, 44, 0.16);
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<link rel="stylesheet" href="fonts.css"><link rel="stylesheet" href="planner.css"><link rel="stylesheet" href="interactive.css"><script src="interactive.js" defer></script></head>
+<body data-screen="planner" class="bg-background text-on-surface antialiased flex justify-center min-h-screen selection:bg-primary selection:text-on-primary">
+<!-- Mobile Frame Container -->
+<div class="w-full max-w-md bg-background min-h-screen flex flex-col relative pb-32">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-40 bg-surface/95 backdrop-blur-sm border-b border-surface-variant/40 px-margin h-16 flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container flex items-center justify-center border-2 border-primary/20 shadow-xs" title="Profile picture of user">
+<img class="w-full h-full object-cover" data-alt="A warm and inviting photographic portrait of a middle-aged Mediterranean culinary home cook smiling warmly in a sun-drenched stone kitchen. Soft daylight fills the room with warm linen and olive tones. Styled like a modern gastronomic magazine editorial." src="media/ca51327e3dbbcf33.webp"/ alt="Akletna Stitch design imagery" decoding="async">
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<h1 class="text-headline-sm font-headline-sm text-primary font-bold tracking-tight">Akletna <span class="font-normal text-on-surface-variant font-body-sm text-sm">اكلتنا</span></h1>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant">May 14 – May 20, 2024</p>
+</div>
+</div>
+<!-- Top Action Cluster -->
+<div class="flex items-center gap-1.5">
+<button class="flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-primary/10 text-primary hover:bg-primary/20 active:scale-95 transition-all duration-150" title="Auto-Generate Plan">
+<span class="material-symbols-outlined text-base">auto_awesome</span>
+<span class="text-label-sm font-label-sm hidden sm:inline">Auto-Plan</span>
+</button>
+<button class="w-9 h-9 flex items-center justify-center rounded-full hover:bg-surface-container text-on-surface-variant active:scale-95 transition-transform duration-150" data-icon="shopping_bag" title="Sync to Grocery">
+<span class="material-symbols-outlined text-xl">shopping_bag</span>
+</button>
+<button class="w-9 h-9 flex items-center justify-center rounded-full hover:bg-surface-container text-on-surface-variant active:scale-95 transition-transform duration-150" data-icon="notifications" title="Notifications">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-margin pt-4 space-y-5">
+<!-- Sub-header Title Area -->
+<div class="flex items-baseline justify-between">
+<div>
+<span class="text-label-md font-label-md text-accent-spice-text font-bold tracking-wider uppercase">Family Table Routine</span>
+<h2 class="text-headline-md font-headline-md font-bold text-on-surface tracking-tight">Weekly Meal Plan</h2>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full text-label-sm font-label-sm font-semibold shadow-xs" style="background-color: #FEF3C7; border: 1px solid #D97706; color: #B45309;"><span class="material-symbols-outlined text-sm" style="color: #E5A128;">eco</span><span>4 Fresh Herb Meals</span></div>
+</div>
+<!-- Interactive 7-Day Calendar Strip -->
+<section aria-label="Weekly Calendar Strip">
+<div class="flex items-center justify-between pb-1.5">
+<span class="text-label-sm font-label-sm text-on-surface-variant font-semibold tracking-wider">SELECT DAY</span>
+<span class="text-label-sm font-label-sm text-primary font-bold">Today: Wednesday</span>
+</div>
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 -mx-margin px-margin">
+<!-- Mon 14 -->
+<button class="flex-shrink-0 flex flex-col items-center justify-between w-12 py-2.5 rounded-2xl bg-surface-container-lowest border border-surface-variant active:scale-95 transition-all hover:bg-surface-container-low">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Mon</span>
+<span class="text-title-md font-title-md font-semibold text-on-surface mt-1">14</span>
+<div class="w-1.5 h-1.5 rounded-full bg-primary mt-2"></div>
+</button>
+<!-- Tue 15 -->
+<button class="flex-shrink-0 flex flex-col items-center justify-between w-12 py-2.5 rounded-2xl bg-surface-container-lowest border border-surface-variant active:scale-95 transition-all hover:bg-surface-container-low">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Tue</span>
+<span class="text-title-md font-title-md font-semibold text-on-surface mt-1">15</span>
+<div class="w-1.5 h-1.5 rounded-full bg-primary mt-2"></div>
+</button>
+<!-- Wed 16 (Active Today: #2F634A Wild Mint & Pine with Golden Saffron Dot) -->
+<button class="flex-shrink-0 flex flex-col items-center justify-between w-14 py-3 rounded-2xl text-white shadow-olive-ambient ring-2 ring-offset-2 ring-offset-background scale-105 active:scale-95 transition-all" style="background-color: #2F634A; --tw-ring-color: #2F634A;"><span class="text-label-sm font-label-sm text-white/90 uppercase font-bold tracking-wider">Wed</span><span class="text-title-lg font-title-lg text-white font-bold mt-0.5">16</span><div class="flex items-center gap-1 mt-1.5"><span class="w-1.5 h-1.5 rounded-full" style="background-color: #E5A128;"></span><span class="w-1.5 h-1.5 rounded-full bg-white/70"></span></div></button>
+<!-- Thu 17 -->
+<button class="flex-shrink-0 flex flex-col items-center justify-between w-12 py-2.5 rounded-2xl bg-surface-container-lowest border border-surface-variant active:scale-95 transition-all hover:bg-surface-container-low">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Thu</span>
+<span class="text-title-md font-title-md font-semibold text-on-surface mt-1">17</span>
+<div class="w-1.5 h-1.5 rounded-full bg-primary mt-2"></div>
+</button>
+<!-- Fri 18 -->
+<button class="flex-shrink-0 flex flex-col items-center justify-between w-12 py-2.5 rounded-2xl bg-surface-container-lowest border border-surface-variant active:scale-95 transition-all hover:bg-surface-container-low">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Fri</span>
+<span class="text-title-md font-title-md font-semibold text-on-surface mt-1">18</span>
+<div class="w-1.5 h-1.5 rounded-full bg-[#E5A128] mt-2" style="background-color: #C27803;" title="Mezze feast"></div>
+</button>
+<!-- Sat 19 -->
+<button class="flex-shrink-0 flex flex-col items-center justify-between w-12 py-2.5 rounded-2xl bg-surface-container-lowest border border-surface-variant active:scale-95 transition-all hover:bg-surface-container-low">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Sat</span>
+<span class="text-title-md font-title-md font-semibold text-on-surface mt-1">19</span>
+<div class="w-1.5 h-1.5 rounded-full bg-outline-variant mt-2"></div>
+</button>
+<!-- Sun 20 -->
+<button class="flex-shrink-0 flex flex-col items-center justify-between w-12 py-2.5 rounded-2xl bg-surface-container-lowest border border-surface-variant active:scale-95 transition-all hover:bg-surface-container-low">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Sun</span>
+<span class="text-title-md font-title-md font-semibold text-on-surface mt-1">20</span>
+<div class="w-1.5 h-1.5 rounded-full bg-primary mt-2"></div>
+</button>
+</div>
+</section>
+<!-- Day Overview Timeline Header -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2">
+<span class="text-title-md font-title-md font-bold text-on-surface">Wednesday Schedule</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-label-sm font-label-sm font-medium">4 Slots</span>
+</div>
+<button class="text-label-md font-label-md text-primary font-bold flex items-center gap-1 hover:underline">
+<span>Reorder</span>
+<span class="material-symbols-outlined text-sm">tune</span>
+</button>
+</div>
+<!-- Meal Slots Cards Stack -->
+<section class="space-y-3.5">
+<!-- Slot 1: Breakfast -->
+<article class="bg-surface-container-lowest rounded-2xl border border-surface-variant p-3.5 shadow-olive-ambient transition-all hover:border-primary/40 relative">
+<div class="flex items-start justify-between gap-3">
+<div class="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Rustic breakfast presentation of authentic creamy Lebanese labneh swirled in a shallow earthenware terracotta bowl, sprinkled with deep green za'atar herb blend and glistening golden olive oil, accompanied by crisp Persian cucumber slices and fresh mint sprigs. Warm morning kitchen light." src="media/110959432264fc17.webp"/ alt="Akletna Stitch design imagery" decoding="async">
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-accent-spice-text uppercase font-bold tracking-wider">Breakfast • 8:00 AM</span>
+<button class="text-on-surface-variant hover:text-primary p-1 -mr-1" title="Swap Recipe">
+<span class="material-symbols-outlined text-lg">add</span>
+</button>
+</div>
+<h3 class="text-title-md font-title-md font-bold text-on-surface truncate mt-0.5">Labneh with Za'atar, Olive Oil &amp; Cucumbers</h3>
+<div class="flex items-center gap-3 mt-2 text-body-sm font-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">group</span>
+                  2 servings
+                </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">schedule</span>
+                  10 min
+                </span>
+</div>
+</div>
+</div>
+</article>
+<!-- Slot 2: Lunch / Ghada (Main Family Meal - Highlighted) -->
+<article class="bg-surface-container-lowest rounded-2xl border-2 border-primary/40 p-4 shadow-olive-ambient transition-all relative overflow-hidden">
+<div class="absolute top-0 right-0 bg-[#2F634A] text-white text-label-sm font-label-sm px-3 py-1 rounded-bl-xl flex items-center gap-1 shadow-xs" style="background-color: #2F634A;">
+<span class="material-symbols-outlined text-xs text-[#E5A128]" style="color: #E5A128;">local_fire_department</span>
+<span class="font-bold">Main Ghada (غداء)</span>
+</div>
+<div class="flex items-start gap-3.5 pt-2">
+<div class="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container border border-surface-variant">
+<img class="w-full h-full object-cover" data-alt="Appetizing top-down shot of authentic Lebanese Loubieh b'Zeit slow cooked green flat beans in rich garlicky tomato and olive oil sauce served beside fragrant vermicelli toasted rice in a rustic white ceramic plate. Subtle steam rising, Mediterranean aesthetic with warm linen backdrop." src="media/110959432264fc17.webp"/ alt="Akletna Stitch design imagery" decoding="async">
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-primary uppercase font-bold tracking-wider">Lunch • 1:30 PM</span>
+</div>
+<h3 class="text-title-lg font-title-lg text-on-surface mt-0.5 font-bold leading-tight">Traditional Loubieh b'Zeit with Rice</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Classic Levantine vegan green bean stew infused with caramelized onions and olive oil.</p>
+<!-- Metadata Badges -->
+<div class="flex flex-wrap items-center gap-2 mt-2.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-primary-fixed text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs text-primary">check_circle</span>
+                  All Ingredients In Pantry
+                </span>
+<span class="inline-flex items-center gap-1 text-body-sm font-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-primary">group</span>
+                  4 servings
+                </span>
+</div>
+</div>
+</div>
+<!-- Action Buttons for Main Meal -->
+<div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-surface-variant/60"><button class="h-11 px-3 rounded-xl text-white text-label-md font-label-md font-semibold flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all" style="background-color: #2F634A;"><span class="material-symbols-outlined text-base">soup_kitchen</span><span>Start Cook Mode</span></button><button class="h-11 px-3 rounded-xl border-2 text-label-md font-label-md font-bold flex items-center justify-center gap-1.5 active:scale-95 transition-all" style="border-color: #E5A128; color: #B45309; background-color: #FFFBEB;"><span class="material-symbols-outlined text-base" style="color: #E5A128;">edit</span><span>Change Recipe</span></button></div>
+</article>
+<!-- Slot 3: Dinner / Shorbat Adas -->
+<article class="bg-surface-container-lowest rounded-2xl border border-surface-variant p-3.5 shadow-olive-ambient transition-all hover:border-primary/40 relative">
+<div class="flex items-start justify-between gap-3">
+<div class="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Warm golden yellow Shorbat Adas Lebanese red lentil soup in an artisan stone bowl, served with crisp fried Lebanese khubz pita croutons, freshly sliced lemon wedges, and ground cumin dusting. Evening ambiance with warm comforting culinary styling." src="media/8b5361d1fe7a2e59.webp"/ alt="Akletna Stitch design imagery" decoding="async">
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-accent-spice-text uppercase font-bold tracking-wider">Dinner (عشاء) • 8:00 PM</span>
+<button class="text-on-surface-variant hover:text-primary p-1 -mr-1" title="Swap Recipe">
+<span class="material-symbols-outlined text-lg">add</span>
+</button>
+</div>
+<h3 class="text-title-md font-title-md font-bold text-on-surface truncate mt-0.5">Warm Lentil Soup (Shorbat Adas)</h3>
+<div class="flex items-center gap-2 mt-2">
+<!-- Golden Saffron / Ochre warning missing item badge -->
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm font-semibold" style="background-color: #FEF3C7; color: #B45309; border: 1px solid #D97706;"><span class="material-symbols-outlined text-xs" style="color: #E5A128;">priority_high</span> 1 item missing (Pita bread)</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">group</span>
+                  4
+                </span>
+</div>
+</div>
+</div>
+</article>
+<!-- Slot 4: Snack -->
+<article class="bg-surface-container-lowest rounded-2xl border border-surface-variant p-3.5 shadow-olive-ambient transition-all hover:border-primary/40 relative">
+<div class="flex items-start justify-between gap-3">
+<div class="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Chilled crisp watermelon cubes arranged with fresh Akkawi goat cheese cubes and miniature toasted crispy Lebanese spiced meat arayes pita triangles on an artisanal unglazed terracotta platter with mint leaves. Bright Mediterranean natural daylight." src="media/159124c9688eb342.webp"/ alt="Akletna Stitch design imagery" decoding="async">
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-accent-spice-text uppercase font-bold tracking-wider">SNACK • 5:00 PM</span>
+<button class="text-on-surface-variant hover:text-primary p-1 -mr-1" title="Swap Recipe">
+<span class="material-symbols-outlined text-lg">add</span>
+</button>
+</div>
+<h3 class="text-title-md font-title-md font-bold text-on-surface truncate mt-0.5">Watermelon, Jibneh &amp; Arayes Bites</h3>
+<div class="flex items-center gap-3 mt-2 text-body-sm font-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">group</span>
+                  2 servings
+                </span>
+<span class="flex items-center gap-1 font-semibold" style="color: #B45309;"><span class="material-symbols-outlined text-sm" style="color: #E5A128;">energy_savings_leaf</span> Quick Refuel</span>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- Add Recipe Slot Dashed Button -->
+<button class="w-full py-3.5 px-4 rounded-2xl border-2 border-dashed border-primary/40 hover:border-primary bg-primary/5 hover:bg-primary/10 text-primary flex items-center justify-center gap-2 transition-all active:scale-98">
+<span class="material-symbols-outlined text-xl">add_circle</span>
+<span class="text-label-lg font-label-lg font-bold">+ Add Recipe Slot</span>
+</button>
+<!-- Weekly Nutrition & Heritage Prep Summary Card -->
+<section class="bg-surface-container-lowest rounded-2xl border border-surface-variant p-4 shadow-olive-ambient space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">balance</span>
+</span>
+<h4 class="text-title-md font-title-md font-bold text-on-surface">Weekly Table Balance</h4>
+</div>
+<span class="text-label-sm font-label-sm text-primary font-bold">Healthy Balance</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">
+          Weekly distribution: <strong class="text-on-surface font-semibold">4 Yakhnet Stews</strong>, <strong class="text-on-surface font-semibold">2 Mezze Nights</strong>, and <strong class="text-on-surface font-semibold">3 Plant-based Days</strong>.
+        </p>
+<!-- Macro / Balance visual bar with Golden Saffron accents -->
+<div class="space-y-1.5 pt-1">
+<div class="h-2.5 w-full bg-surface-container rounded-full overflow-hidden flex">
+<div class="bg-[#2F634A] h-full" style="width: 50%" title="Vegetables &amp; Legumes (50%)"></div>
+<div class="bg-[#E5A128] h-full" style="width: 25%" title="Grains &amp; Khubz (25%)"></div>
+<div class="bg-[#3B6E59] h-full" style="width: 25%" title="Proteins &amp; Dairy (25%)"></div>
+</div>
+<div class="flex justify-between text-label-sm font-label-sm text-on-surface-variant pt-0.5">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-[#2F634A] inline-block"></span> 50% Legumes &amp; Veg</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-[#E5A128] inline-block"></span> 25% Grains</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-[#3B6E59] inline-block"></span> 25% Mouneh &amp; Dairy</span>
+</div>
+</div>
+</section>
+<!-- Quick Floating Banner: Generate Grocery List (Deep Green #2F634A with Golden Saffron badge) -->
+<section class="text-white rounded-2xl p-4 shadow-olive-elevated flex items-center justify-between gap-3" style="background-color: #2F634A;"><div class="space-y-0.5"><div class="flex items-center gap-1.5"><span class="px-2.5 py-0.5 rounded-full text-label-sm font-label-sm font-bold tracking-wide" style="background-color: #E5A128; color: #FFFFFF;">1-TAP SYNC</span><span class="text-label-sm font-label-sm text-white/90">Saves 45 mins</span></div><h4 class="text-title-md font-title-md font-bold text-white mt-1">Generate Grocery List</h4><p class="text-body-sm font-body-sm text-white/85">Consolidate all missing ingredients for May 14–20.</p></div><button class="flex-shrink-0 w-11 h-11 rounded-full bg-white flex items-center justify-center shadow hover:scale-105 active:scale-95 transition-all" style="color: #2F634A;" title="Generate List"><span class="material-symbols-outlined text-2xl">arrow_forward</span></button></section>
+</main>
+<!-- Material 3 Mobile BottomNavigationBar -->
+<!-- Active Destination: 'Meal Plan' in #2F634A with Golden Saffron indicator on Grocery badge -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-space-xs py-space-xs bg-surface-container-lowest border-t border-surface-variant/70 shadow-lg max-w-md left-1/2 -translate-x-1/2">
+<!-- Destination 1: Home -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1.5 hover:bg-surface-container-low transition-colors duration-200 active:scale-95" title="Home">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-label-sm font-label-sm mt-0.5">Home</span>
+</button>
+<!-- Destination 2: Discover -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1.5 hover:bg-surface-container-low transition-colors duration-200 active:scale-95" title="Discover">
+<span class="material-symbols-outlined text-2xl">explore</span>
+<span class="text-label-sm font-label-sm mt-0.5">Discover</span>
+</button>
+<!-- Destination 3: Meal Plan (ACTIVE DESTINATION: #2F634A Wild Mint) -->
+<button class="flex flex-col items-center justify-center text-white rounded-full px-4 py-1.5 active:scale-95 transition-transform duration-150 shadow-xs" style="background-color: #2F634A;" title="Meal Plan"><span class="material-symbols-outlined text-2xl material-symbols-fill text-white">calendar_month</span><span class="text-label-sm font-label-sm font-bold mt-0.5 text-white">Meal Plan</span></button>
+<!-- Destination 4: Grocery -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1.5 hover:bg-surface-container-low transition-colors duration-200 active:scale-95 relative" title="Grocery">
+<div class="relative">
+<span class="material-symbols-outlined text-2xl">shopping_cart</span>
+<span class="absolute -top-1 -right-1.5 w-4 h-4 rounded-full text-white font-label-sm text-[9px] flex items-center justify-center font-bold" style="background-color: #E5A128;">2</span>
+</div>
+<span class="text-label-sm font-label-sm mt-0.5">Grocery</span>
+</button>
+<!-- Destination 5: Pantry -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1.5 hover:bg-surface-container-low transition-colors duration-200 active:scale-95" title="Pantry">
+<span class="material-symbols-outlined text-2xl">inventory_2</span>
+<span class="text-label-sm font-label-sm mt-0.5">Pantry</span>
+</button>
+</nav>
+</div>
+<div class="preview-toast" role="status" aria-live="polite"></div></body></html>

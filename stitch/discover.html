@@ -1,0 +1,409 @@
+<!DOCTYPE html><html class="h-full" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Akletna اكلتنا - Discover Lebanese Recipes</title>
+<!-- Material Symbols Outlined -->
+
+<!-- Google Fonts: Plus Jakarta Sans & Inter -->
+
+
+
+
+
+<style>
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .ambient-card-shadow {
+      box-shadow: 0 4px 18px -2px rgba(21, 41, 30, 0.06), 0 2px 6px -1px rgba(21, 41, 30, 0.03);
+    }
+    .sheet-shadow {
+      box-shadow: 0 -4px 20px -2px rgba(21, 41, 30, 0.06);
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      line-height: 1;
+    }
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<link rel="stylesheet" href="fonts.css"><link rel="stylesheet" href="discover.css"><link rel="stylesheet" href="interactive.css"><script src="interactive.js" defer></script></head>
+<body data-screen="discover" class="bg-background text-on-surface antialiased flex flex-col min-h-screen pb-24 select-none">
+<!-- TOP APP BAR -->
+<header class="sticky top-0 z-40 bg-surface/95 backdrop-blur-md border-b border-surface-variant/40 shadow-xs transition-colors duration-150">
+<div class="flex justify-between items-center w-full px-margin h-16 max-w-5xl mx-auto">
+<!-- Leading: Avatar profile representation -->
+<button aria-label="Profile picture of user" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center border border-outline-variant/60 active:scale-95 transition-transform duration-150">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">أ</span>
+</button>
+<!-- Center Headline & Brand Script -->
+<div class="flex flex-col items-center text-center">
+<span class="text-headline-sm font-headline-sm font-bold text-primary tracking-tight">Akletna اكلتنا</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium tracking-wide">استكشف الوصفات اللبنانية</span>
+</div>
+<!-- Trailing Action: notifications & bookmark -->
+<div class="flex items-center gap-1">
+<button aria-label="Saved Recipes" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors duration-150 active:scale-95">
+<span class="material-symbols-outlined text-[22px]" style="color: #E5A128; font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+<button aria-label="Notifications" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors duration-150 active:scale-95 relative">
+<span class="material-symbols-outlined text-[22px] text-primary">notifications</span>
+<span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full" style="background-color: #E5A128;"></span>
+</button>
+</div>
+</div>
+</header>
+<!-- MAIN SCROLLABLE CONTENT CANVAS -->
+<main class="w-full max-w-5xl mx-auto px-margin space-y-space-lg pt-space-md">
+<!-- SEARCH & DISCOVERY BAR -->
+<div class="w-full">
+<div class="relative flex items-center w-full bg-surface-container-lowest rounded-xl border border-surface-variant/80 transition-all duration-200 focus-within:ring-2 focus-within:ring-primary shadow-xs">
+<div class="pl-4 pr-2 text-outline flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-[22px]">search</span>
+</div>
+<input class="w-full py-3.5 pr-12 bg-transparent text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none border-0 focus:ring-0" placeholder="Search by dish, ingredient (e.g. Zaatar, Burghul)..." type="text">
+<button aria-label="Filter Options" class="absolute right-2.5 w-9 h-9 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center hover:bg-surface-container-high transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[20px] text-primary">tune</span>
+</button>
+</div>
+</div>
+<!-- HORIZONTAL CATEGORY FILTER CHIPS -->
+<section aria-label="Recipe Categories" class="w-full -mx-margin px-margin overflow-x-auto no-scrollbar flex items-center gap-2 py-1">
+<!-- Active Chip (Wild Mint & Pine Deep Green #2F634A) -->
+<button class="flex-shrink-0 px-4 py-2 rounded-full text-white font-label-md text-label-md shadow-sm transition-all duration-150 active:scale-95 flex items-center gap-1.5" style="background-color: #2F634A;">
+<span class="material-symbols-outlined text-[16px]">restaurant_menu</span>
+<span>All Recipes</span>
+</button>
+<!-- Inactive Chips -->
+<button class="flex-shrink-0 px-4 py-2 rounded-full bg-surface-container border border-surface-variant/40 text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-all duration-150 active:scale-95">
+        Mezze (مقبلات)
+      </button>
+<button class="flex-shrink-0 px-4 py-2 rounded-full bg-surface-container border border-surface-variant/40 text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-all duration-150 active:scale-95">
+        Yakhnet &amp; Stews (يخنات)
+      </button>
+<button class="flex-shrink-0 px-4 py-2 rounded-full bg-surface-container border border-surface-variant/40 text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-all duration-150 active:scale-95">
+        Fresh Salads (سلطات)
+      </button>
+<button class="flex-shrink-0 px-4 py-2 rounded-full bg-surface-container border border-surface-variant/40 text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-all duration-150 active:scale-95">
+        Main Grills &amp; Dishes
+      </button>
+<button class="flex-shrink-0 px-4 py-2 rounded-full bg-surface-container border border-surface-variant/40 text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-all duration-150 active:scale-95">
+        Lebanese Breakfast
+      </button>
+<button class="flex-shrink-0 px-4 py-2 rounded-full bg-surface-container border border-surface-variant/40 text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-all duration-150 active:scale-95">
+        Soups &amp; Sides
+      </button>
+</section>
+<!-- CURATED VS COMMUNITY TOGGLE TAB -->
+<div class="flex items-center justify-between border-b border-surface-variant/70 pb-3">
+<div class="bg-surface-container p-1 rounded-xl flex items-center gap-1 border border-surface-variant/50">
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-surface-container-lowest text-primary shadow-xs font-label-md text-label-md font-semibold transition-all">
+<span class="material-symbols-outlined text-[16px]" style="color: #E5A128; font-variation-settings: 'FILL' 1;">verified</span>
+<span>Curated Kitchen</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium transition-all">
+<span class="material-symbols-outlined text-[16px]">group</span>
+<span>Community Recipes</span>
+</button>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="font-label-sm text-label-sm">48 Authentic Dishes</span>
+</div>
+</div>
+<!-- FEATURED HERO RECIPE BANNER (Tabbouleh Al-Dayaa) -->
+<section class="w-full">
+<div class="relative bg-surface-container-lowest rounded-2xl overflow-hidden border border-surface-variant/80 ambient-card-shadow transition-all group cursor-pointer">
+<div class="relative w-full h-64 md:h-80 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An artisanal Lebanese mountain Tabbouleh salad presented in an authentic terracotta bowl on a weathered cream linen surface. The dish is brimming with finely chopped fresh flat-leaf parsley, vibrant diced red tomatoes, fresh garden mint, and delicate fine golden burghul, drizzled with gleaming virgin olive oil and fresh lemon juice. Natural Mediterranean daylight creates soft warm shadows, conveying a rustic, wholesome, and refined culinary aesthetic with botanical greens and terracotta tones." src="media/73878e2a8fe3fdcd.webp" alt="Akletna Stitch design imagery" decoding="async">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+<!-- Top Heritage Seal & Quick Action -->
+<div class="absolute top-3 left-3 right-3 flex items-center justify-between">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full shadow-sm font-label-sm text-label-sm font-bold border" style="background-color: #FEF3C7; color: #B45309; border-color: rgba(229, 161, 40, 0.3);">
+<span class="material-symbols-outlined text-[15px]" style="color: #E5A128; font-variation-settings: 'FILL' 1;">workspace_premium</span>
+              Heritage Curated
+            </span>
+<button aria-label="Bookmark Tabbouleh" class="w-10 h-10 rounded-full bg-white/95 backdrop-blur-md flex items-center justify-center hover:bg-white active:scale-90 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[20px]" style="color: #E5A128; font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+<!-- Floating Bottom Card Content Inside Hero -->
+<div class="absolute bottom-3 left-3 right-3 p-4 bg-white/95 backdrop-blur-md rounded-xl border border-surface-variant/60 shadow-lg">
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded-md text-primary font-label-sm text-label-sm font-semibold" style="background-color: rgba(47, 99, 74, 0.1);">Mountain Tradition</span>
+<span class="px-2 py-0.5 rounded-md font-label-sm text-label-sm font-semibold" style="background-color: #FEF3C7; color: #B45309;">Mouneh Olive Oil</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface leading-tight">
+              Tabbouleh Al-Dayaa — The Authentic Mountain Recipe
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-1">
+              Fresh flat-leaf parsley, fresh spearmint, vine tomatoes, fine golden burghul, and cold-pressed Koura virgin olive oil.
+            </p>
+<div class="mt-3 pt-2.5 border-t border-surface-variant/60 flex items-center justify-between">
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="flex items-center gap-1 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+                  25 mins
+                </span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">group</span>
+                  6 servings
+                </span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">local_florist</span>
+                  Vegan
+                </span>
+</div>
+<span class="text-primary font-label-md text-label-md font-bold flex items-center gap-0.5 group-hover:translate-x-0.5 transition-transform">
+                Cook <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION TITLE: SEASONAL & ESSENTIAL MEZZE -->
+<div class="flex items-center justify-between pt-2">
+<div>
+<h3 class="font-title-lg text-title-lg font-bold text-on-surface">Essential Lebanese Mezze</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Handcrafted ancestral recipes with balanced olive oil and citrus</p>
+</div>
+<button class="font-label-md text-label-md text-primary font-semibold flex items-center gap-1 hover:underline">
+        See All
+        <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- RECIPE DISCOVERY GRID (Bento / High-Touch Cards) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- CARD 1: Traditional Hummus bi Tahini -->
+<article class="bg-surface-container-lowest rounded-2xl border border-surface-variant overflow-hidden ambient-card-shadow flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="relative w-full h-48 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Authentic Lebanese Hummus bi Tahini served in a shallow earthenware clay dish, artfully swirled with a pool of green extra virgin olive oil, sprinkled with toasted pine nuts, whole chickpeas, and bright crimson sumac. Set upon a warm linen backdrop with warm Mediterranean sunlight filtering through an olive tree, creating natural, textured lighting with tones of olive green, warm stone, and terracotta." src="media/d5f343408b67bf32.webp" alt="Akletna Stitch design imagery" decoding="async">
+<div class="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold shadow-xs flex items-center gap-1 border" style="background-color: #FEF3C7; color: #B45309; border-color: rgba(229, 161, 40, 0.4);">
+<span class="material-symbols-outlined text-[14px]" style="color: #E5A128; font-variation-settings: 'FILL' 1;">verified</span>
+              Curated
+            </div>
+<button aria-label="Save Hummus bi Tahini" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white active:scale-90 transition-transform shadow-xs">
+<span class="material-symbols-outlined text-[18px]" style="color: #E5A128; font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+<div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded-md bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm font-medium">
+              حمص بالطحينة
+            </div>
+</div>
+<div class="p-4 space-y-2">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Mezze Foundation</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Easy</span>
+</div>
+<h4 class="font-title-md text-title-md font-bold text-on-surface group-hover:text-primary transition-colors">
+              Traditional Hummus bi Tahini with Toasted Pine Nuts
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Slow-simmered garbanzo beans pureed with velvety sesame tahini, fresh lemon juice, garlic, and a crown of golden pine nuts.
+            </p>
+</div>
+</div>
+<div class="px-4 pb-4 pt-2 border-t border-surface-variant/40 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">timer</span>
+              20 mins
+            </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">person</span>
+              6 servings
+            </span>
+</div>
+<button class="text-primary font-semibold flex items-center gap-0.5 hover:underline">
+            View Recipe
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- CARD 2: Fattoush with Pomegranate Molasses -->
+<article class="bg-surface-container-lowest rounded-2xl border border-surface-variant overflow-hidden ambient-card-shadow flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="relative w-full h-48 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A colorful Lebanese Fattoush salad in an artisanal ceramic bowl, filled with crisp romaine lettuce, purslane leaves, radish discs, Persian cucumbers, and tossed with toasted crispy khubz flatbread chips. Drizzled with a glossy dark ruby pomegranate molasses vinaigrette and sprinkled with wild sumac. Captured with soft directional studio light, emphasizing crisp fresh textures, deep herbal greens, and warm terracotta hues." src="media/b5c890d42e86ad3f.webp" alt="Akletna Stitch design imagery" decoding="async">
+<div class="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold shadow-xs flex items-center gap-1 border" style="background-color: #FEF3C7; color: #B45309; border-color: rgba(229, 161, 40, 0.4);">
+<span class="material-symbols-outlined text-[14px]" style="color: #E5A128; font-variation-settings: 'FILL' 1;">verified</span>
+              Curated
+            </div>
+<button aria-label="Save Fattoush" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm text-on-surface flex items-center justify-center hover:bg-white active:scale-90 transition-transform shadow-xs">
+<span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+</button>
+<div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded-md bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm font-medium">
+              فتوش لبناني
+            </div>
+</div>
+<div class="p-4 space-y-2">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Crisp Salad</span>
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold" style="background-color: #FEF3C7; color: #B45309;">Tangy Sumac</span>
+</div>
+<h4 class="font-title-md text-title-md font-bold text-on-surface group-hover:text-primary transition-colors">
+              Fattoush with Pomegranate Molasses &amp; Crispy Khubz
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Heirloom radishes, garden purslane, crisp pita chips, dressed in tangy pomegranate reduction and wild Mediterranean sumac.
+            </p>
+</div>
+</div>
+<div class="px-4 pb-4 pt-2 border-t border-surface-variant/40 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">timer</span>
+              15 mins
+            </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">person</span>
+              4 servings
+            </span>
+</div>
+<button class="text-primary font-semibold flex items-center gap-0.5 hover:underline">
+            View Recipe
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- CARD 3: Batata Harra -->
+<article class="bg-surface-container-lowest rounded-2xl border border-surface-variant overflow-hidden ambient-card-shadow flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="relative w-full h-48 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Golden pan-roasted Lebanese Batata Harra potato cubes tossed with sautéed minced garlic, fresh green coriander cilantro, Aleppo chili flakes, and freshly squeezed lemon juice. Served in a shallow rustic dark green ceramic platter on an untreated wooden kitchen table. Warm cinematic side lighting brings out the crispy edges and glistening spiced olive oil in tones of gold, fiery amber, and botanical olive green." src="media/147b1c42bd06b066.webp" alt="Akletna Stitch design imagery" decoding="async">
+<div class="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold shadow-xs flex items-center gap-1 border" style="background-color: #FEF3C7; color: #B45309; border-color: rgba(229, 161, 40, 0.4);">
+<span class="material-symbols-outlined text-[14px]" style="color: #E5A128; font-variation-settings: 'FILL' 1;">verified</span>
+              Curated
+            </div>
+<button aria-label="Save Batata Harra" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm text-on-surface flex items-center justify-center hover:bg-white active:scale-90 transition-transform shadow-xs">
+<span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+</button>
+<div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded-md bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm font-medium">
+              بطاطا حرة
+            </div>
+</div>
+<div class="p-4 space-y-2">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold" style="background-color: #FEF3C7; color: #B45309;">Spicy Hot</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Garlic &amp; Cilantro</span>
+</div>
+<h4 class="font-title-md text-title-md font-bold text-on-surface group-hover:text-primary transition-colors">
+              Batata Harra (Spicy Garlic &amp; Coriander Potatoes)
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Crisp Yukon gold cubes pan-seared with fragrant crushed garlic, vibrant fresh coriander, Aleppo pepper, and a splash of lemon.
+            </p>
+</div>
+</div>
+<div class="px-4 pb-4 pt-2 border-t border-surface-variant/40 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">timer</span>
+              25 mins
+            </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">person</span>
+              4 servings
+            </span>
+</div>
+<button class="text-primary font-semibold flex items-center gap-0.5 hover:underline">
+            View Recipe
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- CARD 4: Shish Tawook with Toum -->
+<article class="bg-surface-container-lowest rounded-2xl border border-surface-variant overflow-hidden ambient-card-shadow flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="relative w-full h-48 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Char-grilled Lebanese Shish Tawook skewers of yogurt-marinated tender chicken breast cubes, lightly charred from real charcoal. Garnished with flatbread pita, snowy white whipped garlic toum in a small terracotta saucer, and vibrant magenta pickled wild turnips. Styled on a rustic slate board with fresh mint sprigs, captured with dramatic food photography lighting highlighting the warm spiced juices and smoky texture." src="media/c776e3c44da19426.webp" alt="Akletna Stitch design imagery" decoding="async">
+<div class="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold shadow-xs flex items-center gap-1 border" style="background-color: #FEF3C7; color: #B45309; border-color: rgba(229, 161, 40, 0.4);">
+<span class="material-symbols-outlined text-[14px]" style="color: #E5A128; font-variation-settings: 'FILL' 1;">verified</span>
+              Curated
+            </div>
+<button aria-label="Save Shish Tawook" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm text-on-surface flex items-center justify-center hover:bg-white active:scale-90 transition-transform shadow-xs">
+<span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+</button>
+<div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded-md bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm font-medium">
+              شيش طاووق مع ثوم
+            </div>
+</div>
+<div class="p-4 space-y-2">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">High Protein</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Charcoal Grill</span>
+</div>
+<h4 class="font-title-md text-title-md font-bold text-on-surface group-hover:text-primary transition-colors">
+              Shish Tawook with Toum &amp; Pickled Turnips
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Overnight labneh and citrus marinated chicken breast grilled over embers, served with authentic fluffy mountain garlic paste.
+            </p>
+</div>
+</div>
+<div class="px-4 pb-4 pt-2 border-t border-surface-variant/40 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">timer</span>
+              40 mins
+            </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">person</span>
+              4 servings
+            </span>
+</div>
+<button class="text-primary font-semibold flex items-center gap-0.5 hover:underline">
+            View Recipe
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</article>
+</div>
+<!-- CULINARY HERITAGE KNOWLEDGE PILL (Editorial Bento Accent) -->
+<section class="bg-surface-container-low rounded-2xl p-space-md border border-surface-variant/70 flex flex-col md:flex-row items-center gap-4">
+<div class="w-12 h-12 rounded-xl text-white flex items-center justify-center flex-shrink-0 shadow-sm" style="background-color: #2F634A;">
+<span class="material-symbols-outlined text-[26px]">eco</span>
+</div>
+<div class="flex-1 text-center md:text-left">
+<h4 class="font-title-md text-title-md font-bold text-on-surface">The Mouneh Season: Lebanese Pantry Basics</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Learn how sun-cured sumac, orange blossom water, and cold-pressed Koura olive oil form the sacred soul of Levantine flavors.</p>
+</div>
+<button class="px-4 py-2.5 rounded-full border border-primary text-primary font-label-md text-label-md font-semibold hover:bg-primary/5 transition-colors active:scale-95 whitespace-nowrap">
+        Read Story
+      </button>
+</section>
+</main>
+<!-- BOTTOM NAVIGATION BAR -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-space-xs py-space-xs bg-surface-container-lowest border-t border-surface-variant/70 shadow-lg transition-colors duration-150">
+<!-- Item 0: Home -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1.5 hover:bg-surface-container-low transition-colors duration-200 active:scale-95">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="font-label-sm text-label-sm mt-0.5">Home</span>
+</button>
+<!-- Item 1: Discover (ACTIVE DESTINATION - Wild Mint & Pine #2F634A) -->
+<button class="flex flex-col items-center justify-center text-white rounded-full px-4 py-1.5 active:scale-95 transition-transform duration-150 shadow-sm" style="background-color: #2F634A;">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="font-label-sm text-label-sm mt-0.5 font-bold">Discover</span>
+</button>
+<!-- Item 2: Meal Plan -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1.5 hover:bg-surface-container-low transition-colors duration-200 active:scale-95">
+<span class="material-symbols-outlined text-[24px]">calendar_month</span>
+<span class="font-label-sm text-label-sm mt-0.5">Meal Plan</span>
+</button>
+<!-- Item 3: Grocery -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1.5 hover:bg-surface-container-low transition-colors duration-200 active:scale-95">
+<span class="material-symbols-outlined text-[24px]">shopping_cart</span>
+<span class="font-label-sm text-label-sm mt-0.5">Grocery</span>
+</button>
+<!-- Item 4: Pantry -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1.5 hover:bg-surface-container-low transition-colors duration-200 active:scale-95">
+<span class="material-symbols-outlined text-[24px]">inventory_2</span>
+<span class="font-label-sm text-label-sm mt-0.5">Pantry</span>
+</button>
+</nav>
+<div class="preview-toast" role="status" aria-live="polite"></div></body></html>

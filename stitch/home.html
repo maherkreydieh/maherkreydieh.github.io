@@ -1,0 +1,400 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Akletna اكلتنا - Modern Lebanese Kitchen Dashboard</title>
+<!-- Google Fonts: Plus Jakarta Sans & Inter -->
+
+
+
+<!-- Material Symbols Outlined -->
+
+<!-- Tailwind CSS with custom config -->
+
+
+<style>
+    /* Custom subtle touch targets and scrollbars */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      line-height: 1;
+    }
+    .soft-ambient-shadow {
+      box-shadow: 0 4px 18px -2px rgba(21, 41, 30, 0.06), 0 2px 6px -1px rgba(21, 41, 30, 0.03);
+    }
+    .elevated-bar-shadow {
+      box-shadow: 0 10px 30px -4px rgba(21, 41, 30, 0.12);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<link rel="stylesheet" href="fonts.css"><link rel="stylesheet" href="home.css"><link rel="stylesheet" href="interactive.css"><script src="interactive.js" defer></script></head>
+<body data-screen="home" class="bg-background text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed min-h-screen flex justify-center">
+<!-- Mobile App Frame Container simulating Flutter Android Shell -->
+<div class="w-full max-w-md bg-background min-h-screen relative flex flex-col pb-28">
+<!-- Android System Status Bar Simulation -->
+<div class="w-full h-7 px-margin flex items-center justify-between text-on-surface-variant font-label-md text-label-md select-none pt-1">
+<span class="font-medium tracking-tight">09:41</span>
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-[15px]" data-icon="wifi">wifi</span>
+<span class="material-symbols-outlined text-[15px]" data-icon="signal_cellular_alt">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[17px]" data-icon="battery_full">battery_full</span>
+</div>
+</div>
+<!-- SHARED COMPONENT: TopAppBar (from JSON) -->
+<header class="bg-surface border-b border-surface-variant/40 flex justify-between items-center w-full px-margin h-16 sticky top-0 z-40 transition-colors">
+<!-- Leading: User Avatar -->
+<div class="flex items-center space-x-3">
+<div class="relative w-10 h-10 rounded-full border-2 border-primary/20 overflow-hidden shadow-xs">
+<img class="w-full h-full object-cover" data-alt="Close-up lifestyle portrait of a young Lebanese woman with warm Mediterranean olive complexion and tied dark hair, smiling gently in a sunlit warm-toned kitchen with terracotta tiles in the soft background." src="media/2643e7365938959f.webp" alt="Akletna Stitch design imagery" decoding="async">
+</div>
+<div>
+<span class="block font-headline-sm text-headline-sm text-primary tracking-tight font-bold">Akletna اكلتنا</span>
+</div>
+</div>
+<!-- Trailing: Notification Button -->
+<button aria-label="Notifications" class="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors duration-150 active:scale-95 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[24px]" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface"></span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="px-margin flex-1 space-y-space-lg pt-space-sm">
+<!-- Greeting & Subtitle Area -->
+<section class="space-y-1">
+<div class="flex items-center justify-between">
+<h1 class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">
+            Sabah el Kheir, Nour 👋
+          </h1>
+</div>
+<p class="font-title-md text-title-md text-primary font-medium flex items-center gap-1.5">
+<span class="">What are we cooking today?</span>
+<span class="text-on-surface-variant text-label-md font-normal font-label-md font-arabic">شو طابخين اليوم؟</span>
+</p>
+</section>
+<!-- Search & Voice/Filter Bar -->
+<section>
+<div class="flex items-center bg-surface-container-lowest rounded-xl px-space-md py-2.5 transition-all focus-within:bg-surface-container-lowest focus-within:ring-1.5 focus-within:ring-primary border border-surface-variant shadow-xs">
+<span class="material-symbols-outlined text-outline text-[22px] mr-2.5" data-icon="search">search</span>
+<input class="w-full bg-transparent border-0 p-0 text-on-surface placeholder:text-outline font-body-md text-body-md focus:ring-0" placeholder="Search recipes, ingredients, mezze..." type="text">
+<div class="flex items-center space-x-1 pl-2">
+<button aria-label="Voice Search" class="w-8 h-8 rounded-full flex items-center justify-center text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="mic">mic</span>
+</button>
+<button aria-label="Filters" class="w-8 h-8 rounded-full flex items-center justify-center text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="tune">tune</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 7-Day Meal Planner Weekly Glance Strip -->
+<section class="space-y-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="calendar_today">calendar_today</span>
+<h2 class="font-title-lg text-title-lg text-on-surface font-bold">This Week's Table</h2>
+</div>
+<a class="font-label-md text-label-md text-primary hover:underline font-semibold flex items-center" href="#">
+            Full Matrix <span class="material-symbols-outlined text-[16px] ml-0.5" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+<!-- Weekly Pill Strip -->
+<div class="flex items-center justify-between gap-1.5 overflow-x-auto no-scrollbar py-1">
+<!-- Mon -->
+<button class="flex flex-col items-center justify-center min-w-[44px] py-2 px-1 rounded-xl bg-surface-container-lowest border border-surface-variant text-on-surface-variant hover:bg-surface-container transition-all">
+<span class="font-label-sm text-label-sm text-outline">MON</span>
+<span class="font-title-md text-title-md font-semibold text-on-surface mt-0.5">14</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5"></span>
+</button>
+<!-- Tue -->
+<button class="flex flex-col items-center justify-center min-w-[44px] py-2 px-1 rounded-xl bg-surface-container-lowest border border-surface-variant text-on-surface-variant hover:bg-surface-container transition-all">
+<span class="font-label-sm text-label-sm text-outline">TUE</span>
+<span class="font-title-md text-title-md font-semibold text-on-surface mt-0.5">15</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5"></span>
+</button>
+<!-- Wed (Active Today) -->
+<button class="flex flex-col items-center justify-center min-w-[48px] py-2.5 px-1.5 rounded-xl bg-primary text-on-primary shadow-sm ring-2 ring-primary/25 scale-105 transform transition-transform"><span class="font-label-sm text-label-sm text-on-primary uppercase tracking-wider font-bold">TODAY</span>
+<span class="font-title-lg text-title-lg font-bold text-on-primary mt-0.5">16</span>
+<span class="w-1.5 h-1.5 rounded-full mt-1.5" style="background-color: #E5A128;"></span></button>
+<!-- Thu -->
+<button class="flex flex-col items-center justify-center min-w-[44px] py-2 px-1 rounded-xl bg-surface-container-lowest border border-surface-variant text-on-surface-variant hover:bg-surface-container transition-all">
+<span class="font-label-sm text-label-sm text-outline">THU</span>
+<span class="font-title-md text-title-md font-semibold text-on-surface mt-0.5">17</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary mt-1.5"></span>
+</button>
+<!-- Fri -->
+<button class="flex flex-col items-center justify-center min-w-[44px] py-2 px-1 rounded-xl bg-surface-container-lowest border border-surface-variant text-on-surface-variant hover:bg-surface-container transition-all">
+<span class="font-label-sm text-label-sm text-outline">FRI</span>
+<span class="font-title-md text-title-md font-semibold text-on-surface mt-0.5">18</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5"></span>
+</button>
+<!-- Sat -->
+<button class="flex flex-col items-center justify-center min-w-[44px] py-2 px-1 rounded-xl bg-surface-container-lowest border border-surface-variant text-on-surface-variant hover:bg-surface-container transition-all">
+<span class="font-label-sm text-label-sm text-outline">SAT</span>
+<span class="font-title-md text-title-md font-semibold text-on-surface mt-0.5">19</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant mt-1.5"></span>
+</button>
+<!-- Sun -->
+<button class="flex flex-col items-center justify-center min-w-[44px] py-2 px-1 rounded-xl bg-surface-container-lowest border border-surface-variant text-on-surface-variant hover:bg-surface-container transition-all">
+<span class="font-label-sm text-label-sm text-outline">SUN</span>
+<span class="font-title-md text-title-md font-semibold text-on-surface mt-0.5">20</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5"></span>
+</button>
+</div>
+</section>
+<!-- Hero Card: Today's Planned Meal -->
+<section class="space-y-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-1.5">
+<span class="w-2 h-2 rounded-full bg-primary" style="background-color: #E5A128;"></span>
+<span class="font-label-md text-label-md text-primary font-bold tracking-wider uppercase">Today's Featured Ghada • غداء</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Lunch</span>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl border border-surface-variant overflow-hidden soft-ambient-shadow flex flex-col">
+<!-- Food Image with Badges -->
+<div class="relative h-48 w-full bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Editorial overhead photograph of traditional Lebanese Loubieh b'Zeit green beans stewed slowly in extra virgin olive oil, sweet onions, and ripe tomatoes in a handcrafted rustic earthenware terracotta bowl, garnished with fresh flat-leaf parsley and served beside warm charred pita bread over a natural off-white linen surface in soft natural Mediterranean morning light." src="media/5db02407a92b571a.webp" alt="Akletna Stitch design imagery" decoding="async">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+<!-- Top Overlay Badges -->
+<div class="absolute top-3 left-3 flex gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm font-semibold shadow-xs">
+                Yakhnet • يخنة
+              </span>
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-primary font-label-sm text-label-sm font-semibold shadow-xs" style="background-color: #FEF3C7; color: #B45309;">
+                Plant-Based
+              </span>
+</div>
+<!-- Bookmark Action -->
+<button aria-label="Bookmark Recipe" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface flex items-center justify-center hover:bg-surface-container-lowest active:scale-95 transition-all shadow-xs">
+<span class="material-symbols-outlined text-[20px] text-primary" data-icon="bookmark" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">bookmark</span>
+</button>
+<!-- Bottom Image Title Anchor -->
+<div class="absolute bottom-3 left-3 right-3 text-white">
+<h3 class="font-headline-sm text-headline-sm font-bold text-white drop-shadow-sm leading-tight">
+                Traditional Loubieh b'Zeit
+              </h3>
+<p class="font-body-sm text-body-sm text-white/90">لوبية بالزيت مع الخبز المرقوق الساخن</p>
+</div>
+</div>
+<!-- Card Details & Action Row -->
+<div class="p-space-md space-y-3.5 bg-surface-container-lowest">
+<div class="flex items-center justify-between text-on-surface-variant font-label-md text-label-md">
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary" data-icon="schedule">schedule</span>
+<span class="">35 mins</span>
+</div>
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary" data-icon="group">group</span>
+<span class="">4 servings</span>
+</div>
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="local_fire_department">local_fire_department</span>
+<span class="">340 kcal</span>
+</div>
+</div>
+<div class="pt-1 flex items-center gap-3">
+<!-- Primary Herb Green Button -->
+<button class="flex-1 h-12 rounded-xl bg-primary text-on-primary font-title-md text-title-md font-semibold flex items-center justify-center space-x-2 shadow-xs hover:bg-primary/90 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-[20px]" data-icon="soup_kitchen">soup_kitchen</span>
+<span class="">Start Cooking</span>
+</button>
+<!-- Secondary Pistachio Quick Checklist Button -->
+<button aria-label="Ingredient Checklist" class="w-12 h-12 rounded-xl bg-secondary-container border border-secondary/30 text-primary flex items-center justify-center hover:bg-secondary-fixed active:scale-95 transition-all" style="background-color: #E5A128; color: #15291E; border-color: #D97706;">
+<span class="material-symbols-outlined text-[22px]" data-icon="checklist">checklist</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Pantry Shortcut Pill Banner -->
+<section>
+<div class="bg-surface-container-lowest border border-surface-variant rounded-2xl p-space-md flex items-center justify-between soft-ambient-shadow">
+<div class="flex items-center space-x-3.5">
+<div class="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center flex-shrink-0 shadow-xs">
+<span class="material-symbols-outlined text-[24px]" data-icon="kitchen">kitchen</span>
+</div>
+<div>
+<div class="flex items-center space-x-2">
+<h4 class="font-title-md text-title-md font-bold text-on-surface">Pantry Ready</h4>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-primary font-label-sm text-label-sm font-semibold" style="background-color: #FEF3C7; color: #B45309; border: 1px solid rgba(229, 161, 40, 0.4);">8 Ready</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">
+                Cook right now with ingredients at home
+              </p>
+</div>
+</div>
+<button aria-label="Open pantry matches" class="w-9 h-9 rounded-full bg-surface-container text-primary border border-surface-variant flex items-center justify-center hover:bg-primary hover:text-white transition-colors" style="background-color: #FFFBEB; color: #B45309; border-color: #FDE68A;">
+<span class="material-symbols-outlined text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Curated Recipe Inspiration Carousel: Bel Yakhneh & Home Cooking -->
+<section class="pb-4">
+<div class="bg-surface-container-lowest border border-surface-variant rounded-2xl p-space-md soft-ambient-shadow space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<span class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary" style="background-color: #FEF3C7; color: #B45309;">
+<span class="material-symbols-outlined text-[18px]" data-icon="shopping_basket">shopping_basket</span>
+</span>
+<div>
+<h4 class="font-title-md text-title-md font-bold text-on-surface">Tonight's Grocery List</h4>
+<p class="font-body-sm text-body-sm text-outline">3 items remaining for Loubieh</p>
+</div>
+</div>
+<a class="font-label-md text-label-md text-primary font-semibold hover:underline" href="#">View All</a>
+</div>
+<!-- Quick Interactive Checklist Items -->
+<div class="space-y-2 pt-1">
+<label class="flex items-center space-x-3 p-2 rounded-xl bg-surface-container-low/80 border border-surface-variant/40 cursor-pointer hover:bg-surface-container transition-colors">
+<input class="w-5 h-5 rounded-md border-outline-variant text-primary focus:ring-primary focus:ring-offset-0" type="checkbox">
+<span class="flex-1 font-body-md text-body-md text-on-surface">Tart Sun-dried Sumac (سماق بلدي)</span>
+<span class="font-label-sm text-label-sm text-outline">50g</span>
+</label>
+<label class="flex items-center space-x-3 p-2 rounded-xl bg-surface-container-low/80 border border-surface-variant/40 cursor-pointer hover:bg-surface-container transition-colors">
+<input class="w-5 h-5 rounded-md border-outline-variant text-primary focus:ring-primary focus:ring-offset-0" type="checkbox">
+<span class="flex-1 font-body-md text-body-md text-on-surface">Raw Mediterranean Pine Nuts (صنوبر)</span>
+<span class="font-label-sm text-label-sm text-outline">100g</span>
+</label>
+<label class="flex items-center space-x-3 p-2 rounded-xl bg-surface-container-low/80 border border-surface-variant/40 cursor-pointer hover:bg-surface-container transition-colors">
+<input checked="" class="w-5 h-5 rounded-md border-outline-variant text-primary focus:ring-primary focus:ring-offset-0" type="checkbox">
+<span class="flex-1 font-body-md text-body-md text-outline line-through">Cold-Pressed Virgin Olive Oil (زيت زيتون)</span>
+<span class="font-label-sm text-label-sm text-outline line-through">1 Bottle</span>
+</label>
+</div>
+</div>
+</section><section class="space-y-3">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Bel Yakhneh &amp; Home Cooking</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Hearty Levant comfort stews and mezze staples</p>
+</div>
+<a class="font-label-md text-label-md text-primary font-semibold hover:underline" href="#">See all</a>
+</div>
+<!-- Horizontal Scrolling Bento Recipe Strip -->
+<div class="flex space-x-3.5 overflow-x-auto no-scrollbar pb-2 -mx-margin px-margin">
+<!-- Card 1: Mujaddara -->
+<div class="flex-shrink-0 w-64 bg-surface-container-lowest rounded-2xl border border-surface-variant overflow-hidden soft-ambient-shadow flex flex-col group">
+<div class="relative h-36 w-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Editorial food monograph overhead view of authentic Lebanese Mujaddara cooked brown lentils and rice topped lavishly with deeply caramelized golden crispy onion ribbons, served in an earthy unglazed ceramic dish beside a bowl of fresh mint cucumber yogurt on a warm rustic stone countertop with gentle morning sunlight." src="media/c903f4913fe00d7e.webp" alt="Akletna Stitch design imagery" decoding="async">
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-xs font-label-sm text-label-sm text-on-surface font-medium">
+                Mezze Heritage
+              </span>
+<button aria-label="Bookmark Mujaddara" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-xs text-on-surface-variant flex items-center justify-center active:scale-95">
+<span class="material-symbols-outlined text-[18px]" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+<div class="p-3.5 flex flex-col justify-between flex-1 space-y-2">
+<div>
+<h4 class="font-title-md text-title-md font-bold text-on-surface line-clamp-1">Mujaddara Safra</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Crispy browned onions &amp; cumin rice</p>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-surface-variant/60 font-label-sm text-label-sm text-outline">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary" data-icon="timer">timer</span> 40m
+                </span>
+<span class="flex items-center gap-1 text-primary font-medium">
+<span class="material-symbols-outlined text-[15px]" data-icon="eco">eco</span> Traditional
+                </span>
+</div>
+</div>
+</div>
+<!-- Card 2: Batata Harra -->
+<div class="flex-shrink-0 w-64 bg-surface-container-lowest rounded-2xl border border-surface-variant overflow-hidden soft-ambient-shadow flex flex-col group">
+<div class="relative h-36 w-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Crisp and spicy Lebanese Batata Harra golden roasted potato cubes tossed with fresh crushed garlic, abundant emerald cilantro, sun-dried red chili flakes, and a heavy squeeze of tart lemon juice presented in a warm terracotta bowl on a sunlit olive wood cutting board." src="media/ca74c1af4cbc836d.webp" alt="Akletna Stitch design imagery" decoding="async">
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-secondary-container font-label-sm text-label-sm text-primary font-semibold">
+                Spicy Mezze
+              </span>
+<button aria-label="Bookmark Batata Harra" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-xs text-on-surface-variant flex items-center justify-center active:scale-95">
+<span class="material-symbols-outlined text-[18px]" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+<div class="p-3.5 flex flex-col justify-between flex-1 space-y-2">
+<div>
+<h4 class="font-title-md text-title-md font-bold text-on-surface line-clamp-1">Batata Harra</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Garlic, coriander &amp; Aleppo chili</p>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-surface-variant/60 font-label-sm text-label-sm text-outline">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary" data-icon="timer">timer</span> 25m
+                </span>
+<span class="flex items-center gap-1 text-secondary font-medium">
+<span class="material-symbols-outlined text-[15px]" data-icon="bolt">bolt</span> Quick
+                </span>
+</div>
+</div>
+</div>
+<!-- Card 3: Shish Tawook with Toum -->
+<div class="flex-shrink-0 w-64 bg-surface-container-lowest rounded-2xl border border-surface-variant overflow-hidden soft-ambient-shadow flex flex-col group">
+<div class="relative h-36 w-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Artisanal Lebanese grilled Shish Tawook chicken skewers marinated in yogurt, garlic, lemon, and tomato paste, resting on charred pita bread garnished with fiery pickled wild cucumbers and a side dish of thick, fluffy authentic garlic toum emulsion under bright warm Mediterranean daylight." src="media/24b116a9c4736e63.webp" alt="Akletna Stitch design imagery" decoding="async">
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-xs font-label-sm text-label-sm text-on-surface font-medium">
+                Mashawi • مشاوي
+              </span>
+<button aria-label="Bookmark Shish Tawook" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-xs text-on-surface-variant flex items-center justify-center active:scale-95">
+<span class="material-symbols-outlined text-[18px]" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+<div class="p-3.5 flex flex-col justify-between flex-1 space-y-2">
+<div>
+<h4 class="font-title-md text-title-md font-bold text-on-surface line-clamp-1">Shish Tawook w/ Toum</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Yogurt marinade &amp; whipped garlic</p>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-surface-variant/60 font-label-sm text-label-sm text-outline">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary" data-icon="timer">timer</span> 30m
+                </span>
+<span class="flex items-center gap-1 text-primary font-medium">
+<span class="material-symbols-outlined text-[15px]" data-icon="local_fire_department">local_fire_department</span> High Protein
+                </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- SHARED COMPONENT: BottomNavBar (from JSON) -->
+<!-- Active Destination: 'Home' is the active dashboard tab -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-space-xs py-space-xs bg-surface-container-lowest border-t border-surface-variant/70 shadow-lg elevated-bar-shadow max-w-md left-1/2 -translate-x-1/2 transition-colors">
+<!-- Destination 1: Home (ACTIVE) -->
+<a aria-label="Home" class="flex flex-col items-center justify-center bg-primary text-on-primary rounded-full px-4 py-1.5 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="home" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">home</span>
+<span class="font-label-sm text-label-sm font-bold mt-0.5">Home</span>
+</a>
+<!-- Destination 2: Discover (INACTIVE) -->
+<a aria-label="Discover" class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1.5 hover:bg-surface-container-low transition-colors duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="explore">explore</span>
+<span class="font-label-sm text-label-sm font-medium mt-0.5">Discover</span>
+</a>
+<!-- Destination 3: Meal Plan (INACTIVE) -->
+<a aria-label="Meal Plan" class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1.5 hover:bg-surface-container-low transition-colors duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="calendar_month">calendar_month</span>
+<span class="font-label-sm text-label-sm font-medium mt-0.5">Meal Plan</span>
+</a>
+<!-- Destination 4: Grocery (INACTIVE) -->
+<a aria-label="Grocery" class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1.5 hover:bg-surface-container-low transition-colors duration-200 active:scale-95" href="#">
+<div class="relative">
+<span class="material-symbols-outlined text-[22px]" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute -top-1 -right-1.5 w-4 h-4 rounded-full bg-secondary text-white font-label-sm text-[9px] flex items-center justify-center font-bold" style="background-color: #E5A128; color: #15291E;">2</span>
+</div>
+<span class="font-label-sm text-label-sm font-medium mt-0.5">Grocery</span>
+</a>
+<!-- Destination 5: Pantry (INACTIVE) -->
+<a aria-label="Pantry" class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1.5 hover:bg-surface-container-low transition-colors duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="inventory_2">inventory_2</span>
+<span class="font-label-sm text-label-sm font-medium mt-0.5">Pantry</span>
+</a>
+</nav>
+</div>
+<!-- Micro-interactions Script -->
+
+<div class="preview-toast" role="status" aria-live="polite"></div></body></html>
